@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -88,17 +87,13 @@ namespace AntFu7.LiveDraw
             }
 
             var r = MessageBox.Show("You have unsaved work, do you want to save it now?", "Unsaved data", MessageBoxButton.YesNoCancel);
-            if (r == MessageBoxResult.Yes || r == MessageBoxResult.OK)
+            if (r is MessageBoxResult.Yes or MessageBoxResult.OK)
             {
                 QuickSave();
                 return true;
             }
-            if (r == MessageBoxResult.No || r == MessageBoxResult.None)
-            {
-                return true;
-            }
 
-            return false;
+            return r is MessageBoxResult.No or MessageBoxResult.None;
         }
 
         private ColorPicker _selectedColor;
@@ -266,7 +261,7 @@ namespace AntFu7.LiveDraw
                 await Display("Fail to load");
             }
 
-            return new StrokeCollection();
+            return [];
         }
 
         private void AnimatedReload(StrokeCollection sc)
@@ -551,13 +546,13 @@ namespace AntFu7.LiveDraw
                 _brushIndex++;
             }
 
-            if (_brushIndex > _brushSizes.Count() - 1)
+            if (_brushIndex > _brushSizes.Length - 1)
             {
                 _brushIndex = 0;
             }
             else if (_brushIndex < 0)
             {
-                _brushIndex = _brushSizes.Count() - 1;
+                _brushIndex = _brushSizes.Length - 1;
             }
 
             SetBrushSize(_brushSizes[_brushIndex]);
@@ -566,7 +561,7 @@ namespace AntFu7.LiveDraw
         private void BrushSwitchButton_Click(object sender, RoutedEventArgs e)
         {
             _brushIndex++;
-            if (_brushIndex > _brushSizes.Count() - 1)
+            if (_brushIndex > _brushSizes.Length - 1)
             {
                 _brushIndex = 0;
             }
@@ -835,7 +830,7 @@ namespace AntFu7.LiveDraw
 
                 case Key.Add:
                     _brushIndex++;
-                    if (_brushIndex > _brushSizes.Count() - 1)
+                    if (_brushIndex > _brushSizes.Length - 1)
                     {
                         _brushIndex = 0;
                     }
@@ -847,7 +842,7 @@ namespace AntFu7.LiveDraw
                     _brushIndex--;
                     if (_brushIndex < 0)
                     {
-                        _brushIndex = _brushSizes.Count() - 1;
+                        _brushIndex = _brushSizes.Length - 1;
                     }
 
                     SetBrushSize(_brushSizes[_brushIndex]);
@@ -895,12 +890,9 @@ namespace AntFu7.LiveDraw
         {
             if (_isMoving == true)
             {
-                Point endPoint = e.GetPosition(MainInkCanvas);
                 if (_lastStroke != null)
                 {
-                    StrokeCollection collection = new StrokeCollection();
-                    collection.Add(_lastStroke);
-                    Push(_history, new StrokesHistoryNode(collection, StrokesHistoryNodeType.Added));
+                    Push(_history, new StrokesHistoryNode([_lastStroke], StrokesHistoryNodeType.Added));
                 }
             }
             _isMoving = false;
@@ -914,21 +906,20 @@ namespace AntFu7.LiveDraw
                 return;
             }
 
-            DrawingAttributes newLine = MainInkCanvas.DefaultDrawingAttributes.Clone();
-            Stroke stroke = null;
+            var newLine = MainInkCanvas.DefaultDrawingAttributes.Clone();
             newLine.StylusTip = StylusTip.Ellipse;
             newLine.IgnorePressure = true;
 
-            Point _endPoint = e.GetPosition(MainInkCanvas);
+            var endPoint = e.GetPosition(MainInkCanvas);
 
-            List<Point> pList = new List<Point>
+            var pList = new List<Point>
             {
                 new Point(_startPoint.X, _startPoint.Y),
-                new Point(_endPoint.X, _endPoint.Y),
+                new Point(endPoint.X, endPoint.Y),
             };
 
-            StylusPointCollection point = new StylusPointCollection(pList);
-            stroke = new Stroke(point) { DrawingAttributes = newLine, };
+            var point = new StylusPointCollection(pList);
+            var stroke = new Stroke(point) { DrawingAttributes = newLine, };
 
             if (_lastStroke != null)
             {
