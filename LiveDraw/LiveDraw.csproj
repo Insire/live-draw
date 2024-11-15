@@ -8,27 +8,19 @@
     <UseWPF>true</UseWPF>
     <Configurations>Debug;Release</Configurations>
     <TargetFramework>net8.0-windows</TargetFramework>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationIcon>Rescoures\Icon.ico</ApplicationIcon>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <WarningLevel>4</WarningLevel>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="App.config" />
-  </ItemGroup>
+
   <ItemGroup>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+
   <ItemGroup>
     <Resource Include="Rescoures\Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Rescoures\save29.png" />
     <Resource Include="Rescoures\undo6.png" />
   </ItemGroup>
