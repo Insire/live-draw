@@ -2,11 +2,6 @@
 
 namespace AntFu7.LiveDraw
 {
-    public enum StrokesHistoryNodeType
-    {
-        Removed,
-        Added
-    }
     internal class StrokesHistoryNode
     {
         public StrokeCollection Strokes { get; private set; }
