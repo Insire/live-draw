@@ -400,7 +400,7 @@
                                 </local:ActivatableButton>
                                 <local:ActivatableButton x:Name="ClearButton"
                                                          Click="ClearButton_Click"
-                                                         ToolTip="Clear screen">
+                                                         ToolTip="Clear screen (C)">
                                     <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
                                     </local:ActivatableButton.RenderTransform>

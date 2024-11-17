@@ -857,6 +857,10 @@ namespace AntFu7.LiveDraw
 
                     SetBrushSize(_brushSizes[_brushIndex]);
                     break;
+
+                case Key.C:
+                    Clear();
+                    break;
             }
         }
 

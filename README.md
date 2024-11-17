@@ -23,11 +23,12 @@ However, **LiveDraw is here and built for it!**
 
 The shortcuts that can be used:
 
-- [ Z ]  Undo, [ Y ]  Redo,
-- [ E ]  Eraser By Stroke, [ D ]  Eraser By Point,
-- [ R ]  Release or Recover interface,
-- [ + ]  Increase size brush, [ - ]  Decrease size brush
-- [ B ]  Brush mode, [ L ]  Line Mode
+- [ Z ] Undo, [ Y ]  Redo,
+- [ E ] Eraser By Stroke, [ D ]  Eraser By Point,
+- [ R ] Release or Recover interface,
+- [ + ] Increase size brush, [ - ]  Decrease size brush
+- [ B ] Brush mode, [ L ]  Line Mode
+- [ C ] Clear
 
 ### Downloads
 
