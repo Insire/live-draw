@@ -21,7 +21,5 @@
 
   <ItemGroup>
     <Resource Include="Rescoures\Icon.ico" />
-    <Resource Include="Rescoures\save29.png" />
-    <Resource Include="Rescoures\undo6.png" />
   </ItemGroup>
 </Project>
