@@ -5,12 +5,12 @@ namespace AntFu7.LiveDraw
 {
     internal class ActivatableButton : Button
     {
-        public static readonly DependencyProperty IsActivedProperty = DependencyProperty.Register(nameof(IsActived), typeof(bool), typeof(ActivatableButton), new PropertyMetadata(default(bool)));
+        public static readonly DependencyProperty IsActiveProperty = DependencyProperty.Register(nameof(IsActive), typeof(bool), typeof(ActivatableButton), new PropertyMetadata(default(bool)));
 
-        public bool IsActived
+        public bool IsActive
         {
-            get => (bool)GetValue(IsActivedProperty);
-            set => SetValue(IsActivedProperty, value);
+            get => (bool)GetValue(IsActiveProperty);
+            set => SetValue(IsActiveProperty, value);
         }
     }
 }

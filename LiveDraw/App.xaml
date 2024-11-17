@@ -152,7 +152,7 @@
                             </BeginStoryboard>
                         </Trigger.ExitActions>
                     </Trigger>
-                    <Trigger Property="IsActived" Value="True">
+                    <Trigger Property="IsActive" Value="True">
                         <Trigger.EnterActions>
                             <BeginStoryboard>
                                 <Storyboard>
@@ -212,7 +212,7 @@
                                         </BeginStoryboard>
                                     </Trigger.ExitActions>
                                 </Trigger>
-                                <Trigger Property="IsActived" Value="True">
+                                <Trigger Property="IsActive" Value="True">
                                     <Trigger.EnterActions>
                                         <BeginStoryboard>
                                             <Storyboard TargetProperty="Height" TargetName="CheckedIcon">
