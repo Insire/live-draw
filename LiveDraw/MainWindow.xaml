@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AntFu7.LiveDraw"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="LiveDraw Dev"
+        Title="LiveDraw"
         AllowsTransparency="True"
         Background="{StaticResource FakeTransparent}"
         Icon="Rescoures/icon.ico"
