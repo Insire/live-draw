@@ -4,7 +4,7 @@ using System.Windows.Media.Animation;
 
 namespace AntFu7.LiveDraw
 {
-    internal class CornerRadiusAnimation : AnimationTimeline
+    internal sealed class CornerRadiusAnimation : AnimationTimeline
     {
         static CornerRadiusAnimation()
         {
@@ -18,10 +18,7 @@ namespace AntFu7.LiveDraw
 
         public CornerRadius From
         {
-            get
-            {
-                return (CornerRadius)GetValue(FromProperty);
-            }
+            get => (CornerRadius)GetValue(FromProperty);
             set
             {
                 SetValue(FromProperty, value);
@@ -33,10 +30,7 @@ namespace AntFu7.LiveDraw
 
         public CornerRadius To
         {
-            get
-            {
-                return (CornerRadius)GetValue(ToProperty);
-            }
+            get => (CornerRadius)GetValue(ToProperty);
             set
             {
                 SetValue(ToProperty, value);

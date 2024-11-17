@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AntFu7.LiveDraw"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         Title="LiveDraw Dev"
         AllowsTransparency="True"
         Background="{StaticResource FakeTransparent}"
@@ -255,76 +254,76 @@
                               VerticalAlignment="Center">
                             <WrapPanel Margin="0" HorizontalAlignment="Center">
                                 <WrapPanel.Resources>
-                                    <Style BasedOn="{StaticResource ColorPicker}" TargetType="local:ColorPicker">
+                                    <Style BasedOn="{StaticResource ColorPicker}" TargetType="local:ColorPickerButton">
                                         <Setter Property="Size" Value="{Binding ElementName=DefaultColorPicker, Path=Size}" />
                                     </Style>
                                     <Style TargetType="StackPanel">
                                         <Setter Property="Orientation" Value="Horizontal" />
                                     </Style>
                                 </WrapPanel.Resources>
-                                <local:ColorPicker Background="{StaticResource PaintingColor6}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor6}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor3}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor3}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor2}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor2}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor1}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor1}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor5}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor5}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker x:Name="DefaultColorPicker"
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton x:Name="DefaultColorPicker"
                                                    Background="{StaticResource PaintingColor9}"
                                                    Click="ColorPickers_Click"
                                                    Size="Small">
-                                    <local:ColorPicker.RenderTransform>
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor10}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor10}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor11}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor11}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor7}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor7}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor8}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor8}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor4}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor4}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
-                                <local:ColorPicker Background="{StaticResource PaintingColor12}" Click="ColorPickers_Click">
-                                    <local:ColorPicker.RenderTransform>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
+                                <local:ColorPickerButton Background="{StaticResource PaintingColor12}" Click="ColorPickers_Click">
+                                    <local:ColorPickerButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="17.5" CenterY="17.5" />
-                                    </local:ColorPicker.RenderTransform>
-                                </local:ColorPicker>
+                                    </local:ColorPickerButton.RenderTransform>
+                                </local:ColorPickerButton>
                             </WrapPanel>
                         </Grid>
                         <StackPanel x:Name="DetailPanel"
@@ -339,38 +338,26 @@
                                     </Style.Triggers>
                                 </Style>
                             </StackPanel.Style>
-                            <Slider Height="20"
-                                    Background="{StaticResource FakeTransparent}"
-                                    Focusable="False"
-                                    Foreground="#FFBC1919"
-                                    IsMoveToPointEnabled="True"
-                                    IsSelectionRangeEnabled="True"
-                                    Maximum="5"
-                                    Minimum="1"
-                                    Template="{StaticResource SliderHorizontal}"
-                                    ValueChanged="Slider_ValueChanged"
-                                    Visibility="Collapsed"
-                                    Value="2" />
                             <WrapPanel x:Name="ButtonPanel" HorizontalAlignment="Center">
                                 <WrapPanel.Resources>
-                                    <Style BasedOn="{StaticResource FunctionalButton}" TargetType="local:ActivableButton">
+                                    <Style BasedOn="{StaticResource FunctionalButton}" TargetType="local:ActivatableButton">
                                         <Setter Property="Padding" Value="0" />
                                         <Setter Property="Width" Value="32" />
                                         <Setter Property="Height" Value="32" />
                                     </Style>
                                 </WrapPanel.Resources>
-                                <local:ActivableButton x:Name="BrushSwitchButton"
+                                <local:ActivatableButton x:Name="BrushSwitchButton"
                                                        Click="BrushSwitchButton_Click"
                                                        ToolTip="Preview">
-                                    <Border x:Name="brushPreview"
+                                    <Border x:Name="BrushPreview"
                                             Width="5"
                                             Height="5"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
                                             Background="#FFD6D6D6"
                                             CornerRadius="10" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="LineButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="LineButton"
                                                        Click="LineButton_Click"
                                                        ToolTip="Line Mode">
                                     <Path Width="15"
@@ -382,94 +369,94 @@
                                             <RotateTransform Angle="-45" />
                                         </Path.RenderTransform>
                                     </Path>
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="UndoButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="UndoButton"
                                                        Click="UndoButton_Click"
                                                        ToolTip="Undo (Z)">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Data="{DynamicResource IconUndo}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="RedoButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="RedoButton"
                                                        Click="RedoButton_Click"
                                                        ToolTip="Redo (Y)">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Data="{DynamicResource IconUndo}" RenderTransformOrigin="0.5,0.5">
                                         <Path.RenderTransform>
                                             <ScaleTransform ScaleX="-1" />
                                         </Path.RenderTransform>
                                     </Path>
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="EraserButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="EraserButton"
                                                        Click="EraserButton_Click"
                                                        ToolTip="Toggle eraser mode (E)">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Data="{DynamicResource IconEraser}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="ClearButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="ClearButton"
                                                        Click="ClearButton_Click"
                                                        ToolTip="Clear screen">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Width="13" Data="{DynamicResource IconTrashBox}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="PinButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="PinButton"
                                                        Click="PinButton_Click"
                                                        ToolTip="Topmost">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Width="13" Data="{DynamicResource IconPin}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="SaveButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="SaveButton"
                                                        Click="SaveButton_Click"
                                                        PreviewMouseRightButtonDown="SaveButton_RightClick"
                                                        ToolTip="Quick save / Right click to save to file">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Width="13" Data="{DynamicResource IconSave}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="LoadButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="LoadButton"
                                                        Click="LoadButton_Click"
                                                        ToolTip="Load ink from file">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Width="14" Data="{DynamicResource IconLoad}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="ExportButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="ExportButton"
                                                        Click="ExportButton_Click"
                                                        PreviewMouseRightButtonDown="ExportButton_RightClick"
                                                        ToolTip="Export ink to image with transparent / Right click to export to image with screen below">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Data="{DynamicResource IconExport}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="HideButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="HideButton"
                                                        Click="HideButton_Click"
                                                        ToolTip="Hide ink">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Data="{DynamicResource IconCloseEye}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="EnableButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="EnableButton"
                                                        Click="EnableButton_Click"
                                                        ToolTip="Release/Recover the control of drawing">
-                                    <local:ActivableButton.RenderTransform>
+                                    <local:ActivatableButton.RenderTransform>
                                         <RotateTransform Angle="{Binding MinWidth, ElementName=Palette}" CenterX="16" CenterY="16" />
-                                    </local:ActivableButton.RenderTransform>
+                                    </local:ActivatableButton.RenderTransform>
                                     <Path Data="{DynamicResource IconNoAccess}" />
-                                </local:ActivableButton>
-                                <local:ActivableButton x:Name="OrientationButton"
+                                </local:ActivatableButton>
+                                <local:ActivatableButton x:Name="OrientationButton"
                                                        Click="OrientationButton_Click"
                                                        ToolTip="Rotate dock">
                                     <Path Data="{DynamicResource IconMinimize}" RenderTransformOrigin="0.5,0.5">
@@ -477,7 +464,7 @@
                                             <RotateTransform Angle="90" />
                                         </Path.RenderTransform>
                                     </Path>
-                                </local:ActivableButton>
+                                </local:ActivatableButton>
                             </WrapPanel>
                         </StackPanel>
                     </WrapPanel>

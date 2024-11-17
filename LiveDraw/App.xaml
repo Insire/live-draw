@@ -115,12 +115,12 @@
                 <Setter Property="HorizontalAlignment" Value="Center" />
                 <Setter Property="VerticalAlignment" Value="Center" />
             </Style>
-            <Style x:Key="FunctionalButton" TargetType="LiveDraw:ActivableButton">
+            <Style x:Key="FunctionalButton" TargetType="LiveDraw:ActivatableButton">
                 <Setter Property="Background" Value="{StaticResource FunctionalButtonBackground}" />
                 <Setter Property="Cursor" Value="Hand" />
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="LiveDraw:ActivableButton">
+                        <ControlTemplate TargetType="LiveDraw:ActivatableButton">
                             <Grid Background="{StaticResource FakeTransparent}">
                                 <Border Margin="{StaticResource ElementMarginSmall}"
                                         Background="{TemplateBinding Background}"
@@ -175,14 +175,14 @@
                 </Style.Triggers>
             </Style>
 
-            <Style x:Key="ColorPicker" TargetType="LiveDraw:ColorPicker">
+            <Style x:Key="ColorPicker" TargetType="LiveDraw:ColorPickerButton">
                 <Setter Property="Cursor" Value="Pen" />
                 <Setter Property="Width" Value="{StaticResource ColorPickerSmall}" />
                 <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource Self}, Path=Width}" />
                 <Setter Property="Size" Value="Small" />
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="LiveDraw:ColorPicker">
+                        <ControlTemplate TargetType="LiveDraw:ColorPickerButton">
                             <Grid Background="{StaticResource FakeTransparent}">
                                 <Border x:Name="ControlBorder"
                                         Margin="{StaticResource ElementMarginMiddle}"
