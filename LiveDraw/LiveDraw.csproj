@@ -5,13 +5,13 @@
     <RootNamespace>AntFu7.LiveDraw</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
-    <Configurations>Debug;Release</Configurations>
-    <TargetFramework>net9.0-windows</TargetFramework>
     <ApplicationIcon>Rescoures\Icon.ico</ApplicationIcon>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <WarningLevel>4</WarningLevel>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
