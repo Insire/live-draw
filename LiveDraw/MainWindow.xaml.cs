@@ -238,7 +238,7 @@ namespace AntFu7.LiveDraw
                 }
 
                 await using var stream = fs;
-                
+
                 MainInkCanvas.Strokes.Save(fs);
                 _saved = true;
                 await Display("Ink saved");
@@ -342,7 +342,7 @@ namespace AntFu7.LiveDraw
                 DefaultExt = fileExt,
                 Filter = filter,
             };
-            
+
             return dialog.ShowDialog() == true ? dialog.OpenFile() : Stream.Null;
         }
 
