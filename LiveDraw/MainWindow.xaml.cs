@@ -28,37 +28,38 @@ namespace AntFu7.LiveDraw
         private static readonly Duration Duration5 = (Duration)Application.Current.Resources["Duration5"];
         private static readonly Duration Duration7 = (Duration)Application.Current.Resources["Duration7"];
 
-        private const string SaveDirectoryName = "Save";
+        private const string DefaultSaveDirectoryName = "Save";
 
-        public MainWindow()
+        static MainWindow()
         {
-            if (Mutex.WaitOne(TimeSpan.Zero, true))
-            {
-                _history = new Stack<StrokesHistoryNode>();
-                _redoHistory = new Stack<StrokesHistoryNode>();
-                if (!Directory.Exists(SaveDirectoryName))
-                {
-                    Directory.CreateDirectory(SaveDirectoryName);
-                }
-
-                InitializeComponent();
-                SetColor(DefaultColorPicker);
-                SetEnabled(false);
-                SetTopMost(true);
-                SetDetailPanel(true);
-                SetBrushSize(_brushSizes[_brushIndex]);
-                DetailPanel.Opacity = 0;
-
-                MainInkCanvas.Strokes.StrokesChanged += StrokesChanged;
-                MainInkCanvas.MouseLeftButtonDown += StartLine;
-                MainInkCanvas.MouseLeftButtonUp += EndLine;
-                MainInkCanvas.MouseMove += MakeLine;
-                MainInkCanvas.MouseWheel += BrushSize;
-            }
-            else
+            if (!Mutex.WaitOne(TimeSpan.Zero, true))
             {
                 Application.Current.Shutdown(0);
             }
+        }
+
+        public MainWindow()
+        {
+            _history = new Stack<StrokesHistoryNode>();
+            _redoHistory = new Stack<StrokesHistoryNode>();
+            if (!Directory.Exists(DefaultSaveDirectoryName))
+            {
+                Directory.CreateDirectory(DefaultSaveDirectoryName);
+            }
+
+            InitializeComponent();
+            SetColor(DefaultColorPicker);
+            SetEnabled(false);
+            SetTopMost(true);
+            SetDetailPanel(true);
+            SetBrushSize(_brushSizes[_brushIndex]);
+            DetailPanel.Opacity = 0;
+
+            MainInkCanvas.Strokes.StrokesChanged += StrokesChanged;
+            MainInkCanvas.MouseLeftButtonDown += StartLine;
+            MainInkCanvas.MouseLeftButtonUp += EndLine;
+            MainInkCanvas.MouseMove += MakeLine;
+            MainInkCanvas.MouseWheel += BrushSize;
         }
 
         private void Exit(object? sender, EventArgs e)
@@ -224,7 +225,7 @@ namespace AntFu7.LiveDraw
 
         private void QuickSave(string filename = "QuickSave_")
         {
-            Save(new FileStream(Path.Combine(SaveDirectoryName, filename + GenerateFileName()), FileMode.OpenOrCreate));
+            Save(new FileStream(Path.Combine(DefaultSaveDirectoryName, filename + GenerateFileName()), FileMode.OpenOrCreate));
         }
 
         private async void Save(Stream fs)
@@ -329,8 +330,9 @@ namespace AntFu7.LiveDraw
                 DefaultExt = fileExt,
                 Filter = filter,
                 FileName = initFileName,
-                InitialDirectory = Directory.GetCurrentDirectory() + SaveDirectoryName
+                InitialDirectory = Path.Combine(Directory.GetCurrentDirectory(), DefaultSaveDirectoryName)
             };
+
             return dialog.ShowDialog() == true ? dialog.OpenFile() : Stream.Null;
         }
 
