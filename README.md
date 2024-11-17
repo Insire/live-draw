@@ -41,10 +41,16 @@ This was forked from [antfu/live-draw](https://github.com/antfu/live-draw) as of
 - minor bugfixes in regards to proper async usage in C#
 - added a shortcut (C) to clear the entire screen
 
+I am aiming to keep this up to date with upcoming .NET releases. I am not looking for adding a lot more features. Feel free to fork this tho.
+
 ### Requirements
 
 - a supported [Windows OS](https://learn.microsoft.com/en-us/windows/release-health/supported-versions-windows-client)
 - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+
+#### Why no download?
+
+Providing a secure and trusted release is actually a lot of work (also costs money) and i updated this over a timespan of 24hrs for my personal use. If you feel like paying for a trusted signing certificate, i might take you up on that and add CI/CD workflow, resulting in a signed release on github.
 
 ### Features
 
