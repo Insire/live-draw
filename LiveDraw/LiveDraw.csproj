@@ -4,7 +4,6 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>AntFu7.LiveDraw</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <Configurations>Debug;Release</Configurations>
     <TargetFramework>net9.0-windows</TargetFramework>
@@ -17,6 +16,10 @@
 
   <ItemGroup>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
